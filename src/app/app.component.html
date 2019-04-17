@@ -1,20 +1,56 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+<p>
+these are string interpolation <br>
+from class code to here (template):
+<br>
+ <i>{{valueFromComponentClass}}</i>
+ <br>
+ <i>{{'another value'}}</i>
+ <br>
+ <i>{{getValueFromComponentClass()}}</i>
+ <br>
+ <i>{{ 2 == 4}}</i>
+ <br>
+ <i>{{ 2 + 4}}</i>
+ <br>
+ <i>{{ 2==4?'well how about that':'oh yeah'}}</i>
+ <br>
+ <i>{{numberValueFromComponentClass}}</i>
+</p>
+<p>
+  this is property binding and event binding e
+  to here (template):<br>
+  <button class="btn btn-primary" [disabled]="isDisabled" (click)="onButtonClicked()">Button</button>
+ <br>
+  <input type="text" [placeholder]="placeHolderText" />
+ <br>
+  <button class="btn btn-primary" [disabled]="isDisabled" (click)="onButtonClicked2(this,$event)">Button</button>
+ <br>
+  <input type="text" [placeholder]="placeHolderText" (keyup)="onChangeInputText(this,$event)"/>
+ <br>
+</p>
+<p>
+  This is two-way databinding:
+  <input type="text" [placeholder]="placeHolderText" (keydown)="onKeyDownInputText($event)"/>
+ <br>
+  <input type="text" (input)="updateSomeOtherText($event)"/>
+ <br>
+  <input type="text" [(ngModel)]="someOtherText"/>
+ <br>
+  <input type="text" [(ngModel)]="someOtherText"/>
+ <br>
+{{someOtherText}}
+</p>
+<hr>
+Combined Data Binding Exercise From Udemy Angular class
+<p>
+</p>
+<!--property binding, event binding-->
+<button class="btn btn-primary" [disabled]="!username" (click)="resetUserName()">Reset Username</button>
+<!--event binding from here to typescript code-->
+<input type="text" (keyup)="updateUserName($event)"/>
+<!--two-way databinding does same thing as above-->
+<input type="text" [(ngModel)]="username"/>
+This is a mindless paragraph of text
+that will (entered above) show the current username here
+{{username}}
+<p></p>
